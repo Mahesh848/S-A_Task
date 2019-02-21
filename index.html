@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Current Seconds-Seconds since Unix Epoch</title>
+        <link rel="stylesheet" href="./main.css">
+        <link rel="shortcut icon" href="milliseconds.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">   
+    </head>
+    <body>
+        <div class='utcDateTime'>
+            <div class='utcDate'>
+                <p class='text'>UTC date</p>
+                <p id='UTCDate'></p>
+            </div>
+            <div class='utcTime'>
+                <p class='text'>UTC time</p>
+                <p id='UTCTime'></p>
+            </div>
+            <div class='UnixTime'>
+                <p class='text'>UNIX time</p>
+                <p id='UNIXTime'></p>
+            </div>
+            <div class="mdc-text-field" id='input1'>
+                <input type="text" id="my-text-field1" class="mdc-text-field__input" oninput="onInput1()">
+                <label class="mdc-floating-label" for="my-text-field1">Convert Seconds</label>
+                <div class="mdc-line-ripple"></div>
+            </div><br/>
+            <div class="mdc-text-field" id='input2'>
+                <input type="text" id="my-text-field2" value=' ' class="mdc-text-field__input" disabled='true'>
+                <label class="mdc-floating-label" for="my-text-field2">to UTC time & date:</label>
+                <div class="mdc-line-ripple"></div>
+            </div><br/>
+            <div class="mdc-text-field" id='input3'>
+                <input type="text" id="my-text-field3" value=' ' class="mdc-text-field__input" disabled='true'>
+                <label class="mdc-floating-label" for="my-text-field3">to local time & date:</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            <div id='leftNow'>
+                <img src='now.png'>
+            </div>
+        </div>
+        <div class='currentTimeSeconds'>
+            <p id='getCurrentSecs'>current<img src='./milliseconds.png' width="30px" height="30px">seconds</p>
+            <p id='current_secs'></p>
+        </div>
+        <div class='LocalTime'>
+            <div class='localDate'>
+                <p class='text'>local date</p>
+                <p id='LOCALDate'></p>
+            </div>
+            <div class='localTime'>
+                <p class='text'>local time</p>
+                <p id='LOCALTime'></p>
+            </div>
+            <div class='localTimeZone'>
+                <p class='text'>local timezone (UTC+5.5h)</p>
+                <p id='country'>India Standard</p>
+            </div>
+            <div class='date'>
+                <p>Convert local YYYY / MM / DD</p>
+                <input type="text" id="my-text-field4"  class="mdc-text-field__input" oninput="onInput2()">
+                <input type="text" id="my-text-field5"  class="mdc-text-field__input" oninput="onInput2()">
+                <input type="text" id="my-text-field6"  class="mdc-text-field__input" oninput="onInput2()">
+            </div>
+            <div class='time'>
+                <p>and HH : MM : SS</p>
+                <input type="text" id="my-text-field7"  class="mdc-text-field__input" oninput="onInput2()">
+                <input type="text" id="my-text-field8"  class="mdc-text-field__input" oninput="onInput2()">
+                <input type="text" id="my-text-field9"  class="mdc-text-field__input" oninput="onInput2()">
+            </div>
+            <div class="mdc-text-field" id='input4'>
+                <input type="text" id="my-text-field10" value=' ' class="mdc-text-field__input" disabled='true'>
+                <label class="mdc-floating-label" for="my-text-field10">to seconds since epoch</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            <div id='rightNow'>
+                <img src='now.png'>
+            </div>
+        </div>
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <script type="text/javascript" src='./dateTime.js'></script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+body {
+   background: url("./division.png") repeat;
+   display: flex;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 250px;
+}
+#my-text-field4, #my-text-field5, #my-text-field6, #my-text-field7, #my-text-field8, #my-text-field9 {
+    width: 77px;
+}
+.utcDateTime, .LocalTime{
+    padding: 5px;
+    width: 25%;
+    margin-left: 5%;
+    min-width: 270px; 
+}
+.LocalTime input {
+    height: 36px;
+}
+.utcTime, .utcDate, .UnixTime, .mdc-text-field, .localTime, .localDate, .time, .date, .localTimeZone {
+    margin-bottom: 30px;
+}
+.utcDateTime .mdc-text-field {
+    max-width: 250px;
+    width: 80%;
+    margin-left: 5%;
+}
+.LocalTime .mdc-text-field {
+    max-width: 250px;
+    width: 80%;
+}
+#leftNow, #rightNow {
+    width: 50px;
+    height: 50px;
+    margin-left: 110px;
+    cursor: pointer;
+}
+.text{
+    margin-bottom: 7px;
+    font-weight: 50;
+}
+#UTCDate, #UTCTime, #UNIXTime, #LOCALTime, #LOCALDate, #country {
+    font-weight: 900;
+}
+.currentTimeSeconds {
+    width: 30%;
+    font-size: 2.0em;
+    cursor: pointer;
+}
+#getCurrentSecs {
+    font-weight: 900;
+}
+#current_secs {
+    color:rgb(83, 82, 82);
+    font-weight: 500;
+}
+@media screen and (max-width: 850px) {
+    body {
+        display: block;
+        width: 100%;
+    }
+    .LocalTime, .currentTimeSeconds, .utcDateTime{
+        width: 70%;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 851px) and (max-width: 950px) {
+    .LocalTime, .currentTimeSeconds, .utcDateTime{
+        margin: 2px;
+    }
+}
